@@ -1,0 +1,53 @@
+C:\Users\stig\djangoboys>myvenv\Scripts\activate
+
+(myvenv) ~/djangogirls$ python manage.py runserver
+
+Next it's time to sign up for a free "Beginner" account on PythonAnywhere.
+
+www.pythonanywhere.com
+
+$ git clone https://github.com/<your-github-username>/my-first-blog.git
+<emwstig>
+
+$ tree my-first-blog
+
+Creating a virtualenv on PythonAnywhere:
+
+$ cd my-first-blog
+
+$ virtualenv --python=python3.5 myvenv
+Running virtualenv with interpreter /usr/bin/python3.5
+[...]
+Installing setuptools, pip...done.
+
+$ source myvenv/bin/activate
+
+(myvenv) $  pip install django~=1.10.0
+Collecting django
+[...]
+Successfully installed django-1.10.4
+
+We can initialize the database on the server just like we did the one on your own computer, with migrate and createsuperuser:
+
+PythonAnywhere command-line
+(mvenv) $ python manage.py migrate
+Operations to perform:
+[...]
+  Applying sessions.0001_initial... OK
+(mvenv) $ python manage.py createsuperuser
+
+ Add a new web app.
+
+<your-username>_pythonanywhere_com_wsgi.py
+import os
+import sys
+
+path = '/home/<your-PythonAnywhere-username>/my-first-blog'  # use your own PythonAnywhere username here
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+
+from django.core.wsgi import get_wsgi_application
+from django.contrib.staticfiles.handlers import StaticFilesHandler
+application = StaticFilesHandler(get_wsgi_application())
