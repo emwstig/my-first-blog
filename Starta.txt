@@ -51,3 +51,6 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 from django.core.wsgi import get_wsgi_application
 from django.contrib.staticfiles.handlers import StaticFilesHandler
 application = StaticFilesHandler(get_wsgi_application())
+
+
+https://github.com/emwstig/my-babbe-blogg.git
