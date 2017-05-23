@@ -55,6 +55,15 @@ application = StaticFilesHandler(get_wsgi_application())
 
 
 https://github.com/emwstig/my-babbe-blogg.git
+
+$ git status
+[...]
+$ git add --all .
+$ git status
+[...]
+$ git commit -m "Modified templates to display posts from database."
+[...]
+$ git push
 x
 x
 x
