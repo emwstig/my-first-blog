@@ -1,5 +1,6 @@
+Virtual environment start:
 C:\Users\stig\djangoboys>myvenv\Scripts\activate
-
+-----------------------------------------------------
 (myvenv) ~/djangogirls$ python manage.py runserver
 
 Next it's time to sign up for a free "Beginner" account on PythonAnywhere.
@@ -54,3 +55,11 @@ application = StaticFilesHandler(get_wsgi_application())
 
 
 https://github.com/emwstig/my-babbe-blogg.git
+x
+x
+x
+x
+x
+
+Django shell:
+(myvenv) ~/djangogirls$ python manage.py shell
