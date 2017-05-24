@@ -72,3 +72,16 @@ x
 
 Django shell:
 (myvenv) ~/djangogirls$ python manage.py shell
+
+Ändra i en fil, ladda in i Git och upp i PythonAnywhere
+
+1. In med ändringen i Git repo.
+$ git add --all .
+$ git commit -m "Modified templates to display posts from database."
+$ git push
+
+2.
+Ladda upp i PythonAnywhere consol
+$ git pull
+
+3. Ladda upp appen i webfliken. 
