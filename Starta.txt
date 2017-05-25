@@ -84,4 +84,4 @@ $ git push
 Ladda upp i PythonAnywhere consol
 $ git pull
 
-3. Ladda upp appen i webfliken. 
+3. Ladda upp appen bodd i webfliken. 
